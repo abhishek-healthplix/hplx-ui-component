@@ -11,13 +11,14 @@ const Input = (props) => {
         disabled = false,
         placeholder = '',
         required = false,
+        className = ""
     } = props;
 
     return (
-        <label className="frmField">
+        <label>
             {label && <span>{label}</span>}
             <input 
-                className={`input-${type}`}
+                className={className}
                 placeholder={placeholder}
                 onChange={onChange}
                 onBlur={onBlur}

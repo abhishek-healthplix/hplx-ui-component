@@ -10,7 +10,7 @@ const Button = (props) => {
     } = props;
     return (
         <button 
-            className={`btn btn--${className}`}
+            className={className}
             type={type}
             disabled={disabled}
             onClick={onClick} > 

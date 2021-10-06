@@ -1,16 +1,20 @@
 import React from 'react';
 
 const Button = (props) => {
+    const { 
+        label = '',
+        className = '',
+        type = 'button',
+        disabled = false,
+        onClick
+    } = props;
     return (
         <button 
-            className={`btn btn--${props.kind} CTA`}
-            data-id={props.id}
-            type={props.type}
-            name={props.name}
-            value={props.value}
-            disabled={props.disabled}
-            onClick={props.handleClick}> 
-                {props.label}
+            className={`btn btn--${className}`}
+            type={type}
+            disabled={disabled}
+            onClick={onClick} > 
+                {label}
         </button>
     )
 }

@@ -1,15 +1,32 @@
 import React from 'react';
 
 const Input = (props) => {
+    const {
+        name,
+        label = '',
+        onChange,
+        value = '',
+        onBlur,
+        type = 'text',
+        disabled = false,
+        placeholder = '',
+        required = false,
+    } = props;
+
     return (
-        <input 
-            className={`btn btn--${props.kind} CTA`}
-            data-id={props.id}
-            type={props.type}
-            name={props.name}
-            value={props.value}
-            disabled={props.disabled}
-            onClick={props.handleClick} />
+        <label className="frmField">
+            {label && <span>{label}</span>}
+            <input 
+                className={`input-${type}`}
+                placeholder={placeholder}
+                onChange={onChange}
+                onBlur={onBlur}
+                required={required}
+                name={name}
+                type={type}
+                value={value}
+                disabled={disabled} />
+        </label>
     )
 }
 

@@ -10,15 +10,19 @@ var _react = _interopRequireDefault(require("react"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 const Button = props => {
+  const {
+    label = '',
+    className = '',
+    type = 'button',
+    disabled = false,
+    onClick
+  } = props;
   return /*#__PURE__*/_react.default.createElement("button", {
-    className: "btn btn--".concat(props.kind, " CTA"),
-    "data-id": props.id,
-    type: props.type,
-    name: props.name,
-    value: props.value,
-    disabled: props.disabled,
-    onClick: props.handleClick
-  }, props.label);
+    className: "btn btn--".concat(className),
+    type: type,
+    disabled: disabled,
+    onClick: onClick
+  }, label);
 };
 
 var _default = Button;

@@ -10,15 +10,30 @@ var _react = _interopRequireDefault(require("react"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 const Input = props => {
-  return /*#__PURE__*/_react.default.createElement("input", {
-    className: "btn btn--".concat(props.kind, " CTA"),
-    "data-id": props.id,
-    type: props.type,
-    name: props.name,
-    value: props.value,
-    disabled: props.disabled,
-    onClick: props.handleClick
-  });
+  const {
+    name,
+    label = '',
+    onChange,
+    value = '',
+    onBlur,
+    type = 'text',
+    disabled = false,
+    placeholder = '',
+    required = false
+  } = props;
+  return /*#__PURE__*/_react.default.createElement("label", {
+    className: "frmField"
+  }, label && /*#__PURE__*/_react.default.createElement("span", null, label), /*#__PURE__*/_react.default.createElement("input", {
+    className: "input-".concat(type),
+    placeholder: placeholder,
+    onChange: onChange,
+    onBlur: onBlur,
+    required: required,
+    name: name,
+    type: type,
+    value: value,
+    disabled: disabled
+  }));
 };
 
 var _default = Input;

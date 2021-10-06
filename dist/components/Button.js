@@ -18,7 +18,7 @@ const Button = props => {
     onClick
   } = props;
   return /*#__PURE__*/_react.default.createElement("button", {
-    className: "btn btn--".concat(className),
+    className: className,
     type: type,
     disabled: disabled,
     onClick: onClick

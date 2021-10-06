@@ -19,12 +19,11 @@ const Input = props => {
     type = 'text',
     disabled = false,
     placeholder = '',
-    required = false
+    required = false,
+    className = ""
   } = props;
-  return /*#__PURE__*/_react.default.createElement("label", {
-    className: "frmField"
-  }, label && /*#__PURE__*/_react.default.createElement("span", null, label), /*#__PURE__*/_react.default.createElement("input", {
-    className: "input-".concat(type),
+  return /*#__PURE__*/_react.default.createElement("label", null, label && /*#__PURE__*/_react.default.createElement("span", null, label), /*#__PURE__*/_react.default.createElement("input", {
+    className: className,
     placeholder: placeholder,
     onChange: onChange,
     onBlur: onBlur,

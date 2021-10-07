@@ -20,4 +20,6 @@ var _Input = _interopRequireDefault(require("./components/Input"));
 
 var _Button = _interopRequireDefault(require("./components/Button"));
 
+require("./component.css");
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
